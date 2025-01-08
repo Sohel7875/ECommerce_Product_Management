@@ -1,0 +1,56 @@
+.HomePage {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.cart {
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+}
+
+.cartDes {
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartDes span {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.ProductsContainer {
+
+    width: 80%;
+    min-width: 90vw;
+    margin: 2rem auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+}
+
+.productCard {
+    width: 30%;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(168, 164, 164);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.productCard img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+}
+
+.productCard button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: white;
+
+}
+
