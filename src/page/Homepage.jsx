@@ -36,7 +36,9 @@ const Homepage = () => {
                             <h3>{product?.productName}</h3>
                             <p>{product?.productDescription}</p>
                             <span>${product?.price}</span>
-                            <button onClick={() => handleAddToCart(product)}>
+                            <button 
+                            className={isAddedToCart ? styles.addedToCartButton : styles.addToCartButton}
+                            onClick={() => handleAddToCart(product)}>
                                 {isAddedToCart ? 'Added in Cart' : 'Add to Cart'}
                             </button>
                         </div>
