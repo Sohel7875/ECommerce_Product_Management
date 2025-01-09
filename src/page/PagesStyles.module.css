@@ -1,69 +1,158 @@
+/* General Styles */
 .HomePage {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /* border: 1px solid red; */
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
 }
 
-.cart {
-    background-color: white;
-    padding: 1rem;
-    width: 100%;
+/* Header */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #232f3e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.cartDes {
-    font-size: 1rem;
-    font-weight: 600;
+.Header h1 {
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-.cartDes span {
-    font-size: 1.2rem;
-    font-weight: 900;
-}
-
-.ProductsContainer {
-
-    width: 80%;
-    min-width: 90vw;
-    margin: 2rem auto;
+.Header .Cart {
     display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-
+    align-items: center;
+    cursor: pointer;
 }
 
-.productCard {
-    width: 20%;
-    border-radius: 0.5rem;
-    border: 1px solid rgb(168, 164, 164);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
-.productCard span{
-  font-size: 1.5rem;
-  font-weight: 600;
+.Header .Cart span {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.productCard img {
+/* Skeleton Loader */
+.SkeletonContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.SkeletonCard {
+    background: #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.SkeletonImage {
+    background: #ccc;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.SkeletonText {
+    background: #ddd;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.SkeletonButton {
+    background: #bbb;
+    height: 40px;
+    border-radius: 4px;
+}
+
+/* Products */
+.ProductsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.ProductCard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ProductCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ProductCard img {
     width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-
+    height: 200px;
+    object-fit: contain;
 }
 
-.productCard button {
-    padding: 0.6rem;
+.ProductDetails {
+    padding: 1rem;
+    text-align: center;
+}
+
+.ProductDetails h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+    font-weight: 600;
+    height: 40px;
+    overflow: hidden;
+}
+
+.ProductDetails .Price {
+    font-size: 1.2rem;
+    color: #b12704;
+    margin: 0.5rem 0;
+}
+
+.ProductDetails .Rating {
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Buttons */
+button {
+    padding: 0.8rem;
     width: 100%;
     font-size: 1rem;
     border: none;
     border-radius: 4px;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
-
+    transition: background-color 0.3s ease;
 }
 
-.addedToCartButton{
-    background-color: rgb(24, 210, 55);
+.AddToCartButton {
+    background-color: #ffd814;
+    color: #111;
+}
+
+.AddToCartButton:hover {
+    background-color: #f7ca00;
+}
+
+.AddedToCartButton {
+    background-color: #28a745;
     color: white;
 }
 
+.AddedToCartButton:hover {
+    background-color: #218838;
+}
